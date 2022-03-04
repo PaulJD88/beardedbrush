@@ -1,48 +1,26 @@
 <template>
-  <div id="app">
-    <div>
-      <b-navbar type="dark" variant="dark">
-        <b-navbar-nav>
-          <b-nav-item href="#">Home</b-nav-item>
+  <div>
+  <b-navbar toggleable type="dark" variant="dark">
+    <b-navbar-brand href="#">The Bearded Brush Co.</b-navbar-brand>
 
-          <!-- Navbar dropdowns -->
-          <b-nav-item-dropdown text="Lang" right>
-            <b-dropdown-item href="#">EN</b-dropdown-item>
-            <b-dropdown-item href="#">ES</b-dropdown-item>
-            <b-dropdown-item href="#">RU</b-dropdown-item>
-            <b-dropdown-item href="#">FA</b-dropdown-item>
-          </b-nav-item-dropdown>
+    <b-navbar-toggle target="navbar-toggle-collapse">
+      <template #default="{ expanded }">
+        <b-icon v-if="expanded" icon="chevron-bar-up"></b-icon>
+        <b-icon v-else icon="chevron-bar-down"></b-icon>
+      </template>
+    </b-navbar-toggle>
 
-          <b-nav-item-dropdown text="User" right>
-            <b-dropdown-item href="#">Account</b-dropdown-item>
-            <b-dropdown-item href="#">Settings</b-dropdown-item>
-          </b-nav-item-dropdown>
-        </b-navbar-nav>
-      </b-navbar>
-    </div>
+    <b-collapse id="navbar-toggle-collapse" is-nav>
+      <b-navbar-nav class="ml-auto">
+        <b-nav-item href="#">Images</b-nav-item>
+        <b-nav-item href="#">About</b-nav-item>
+        <b-nav-item href="#">Contact</b-nav-item>
+      </b-navbar-nav>
+    </b-collapse>
+  </b-navbar>
     <router-view />
   </div>
 </template>
 
 <style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-
-#nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
-}
 </style>
