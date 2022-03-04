@@ -135,12 +135,4 @@ export default {
 }
 </script>
 <style lang="scss">
-.maincontainer {
-  border: solid black;
-  padding: 10px;
-  margin-top: 200px;
-  border-radius: 5px;
-}
-.text-center {
-  margin: 10px;
-}</style>
+</style>

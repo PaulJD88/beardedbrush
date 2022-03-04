@@ -39,7 +39,7 @@
 
 export default {}
 </script>
-<style scoped lang="scss">
+<style lang="scss">
 .maincontainer {
   border: solid black;
   padding: 10px;
